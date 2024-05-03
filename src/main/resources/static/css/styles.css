@@ -1,0 +1,185 @@
+.navbar {
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-left: 12px;
+    border: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+#container {
+    display: flex;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 660px;
+}
+
+.left-column {
+    flex: 0.8;
+    border: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.right-column {
+    flex: 1.5;
+    border: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.center-column {
+    flex: 4;
+    margin-right: 5px;
+    margin-left: 5px;
+    overflow-y: auto;
+    border: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    box-sizing: content-box;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.total-expense {
+    margin-right: 30px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tableHead {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ui-datepicker-calendar {
+    display: none;
+}
+
+.btn-sm {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.container-sm h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.table-test {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.btn-add-new {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-shadow {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.form-rounded {
+    border-radius: 10px;
+}
+
+.cancel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newExpenseContent {
+    height: 350px;
+    width: 400px;
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    border: 0;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-category-column {
+    flex: 1.5;
+    border: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-link {
+    border-radius: 10px;
+    color: #000000;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    border-radius: 10px;
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.pagenav-and-download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.btn-download {
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}

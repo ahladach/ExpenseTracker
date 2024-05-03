@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Expense - Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5deb3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #000;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #4a4e69;
+            border-color: #4a4e69;
+            padding: 10px 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #3c3f58;
+            border-color: #3c3f58;
+        }
+        .btn-secondary {
+            background-color: #c9ada7;
+            border-color: #c9ada7;
+            padding: 10px 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #b99b96;
+            border-color: #b99b96;
+        }
+        .form-control,
+        .form-select {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+        }
+        .invalid-feedback {
+            color: #ff4136;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="@{/expenses}" style="text-align: left;">ExpenseTracker</a>
+        </div>
+      </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Update Expense</h2>
+                        <form th:action="@{/update}" th:object="${expense}" method="post" novalidate>
+                            <input type="hidden" th:field="*{id}">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Expense Name</label>
+                                <input type="text" class="form-control" id="name" th:field="*{name}" th:errorclass="is-invalid">
+                                <div class="invalid-feedback" th:errors="*{name}"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="expenseType" class="form-label">Expense Type</label>
+                                <select class="form-select" id="expenseType" th:field="*{expenseType}" th:errorclass="is-invalid">
+                                    <option value="">Select Expense Type</option>
+                                    <option th:each="expenseType : ${expenseTypes}" th:value="${expenseType.expenseCategory}" th:text="${expenseType.expenseCategory}"></option>
+                                </select>
+                                <div class="invalid-feedback" th:errors="*{expenseType}"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="number" class="form-control" id="amount" th:field="*{amount}" th:errorclass="is-invalid">
+                                <div class="invalid-feedback" th:errors="*{amount}"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Expense Date</label>
+                                <input type="date" class="form-control" id="date" th:field="*{date}" th:errorclass="is-invalid">
+                                <div class="invalid-feedback" th:errors="*{date}"></div>
+                            </div>
+                            <input type="hidden" th:field="*{creationDate}">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary me-3">Save Changes</button>
+                                <a th:href="@{/expenses}" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
