@@ -6,13 +6,13 @@ This repository contains a simple web application for managing and tracking pers
 
 The Expense Tracker Application comes with the following features:
 
-Add new expenses with details like name, amount, date, and category
-Edit and delete existing expenses
-View a list of all expenses in a paginated table
-Filter expenses by month, year, and category
-See the total expense amount for the selected filter
-Customize expense categories according to your needs
-Export expenses to a CSV file for further analysis or record-keeping
+- Add new expenses: Name, amount, date, category.
+- Edit and delete existing expenses.
+- View expenses in paginated table.
+- Filter by month, year, category.
+- Total expense amount for selected filter.
+- Customize expense categories.
+- Export expenses to CSV.
 
 ## Technologies Used
 
@@ -30,18 +30,18 @@ HTML, CSS, and Bootstrap
 
 To run the Expense Tracker Application on your local machine, follow these steps:
 
-Clone the repository: git clone https://github.com/your-username/expense-tracker-app.git
-Open the project in your preferred Java IDE.
-Make sure you have MySQL installed and running on your machine.
-Create a new MySQL database for the application. You can use the following 
-Update the application.properties file in the src/main/resources directory with your MySQL database URL, username, and password.
-Build and run the application using Maven: mvn spring-boot:run
-Open your web browser and navigate to http://localhost:8191 to access the Expense Tracker Application.
+- Clone the repository: `git clone https://github.com/ahladach/ExpenseTracker.git`
+- Open the project in your preferred Java IDE.
+- Ensure MySQL is installed and running.
+- Create a new MySQL database for the application.
+- Update `application.properties` with your MySQL database URL, username, and password.
+- Build and run the application using Maven: `mvn spring-boot:run`
+- Access the Expense Tracker Application via http://localhost:8191 in your web browser.
 
 ## Project Structure
 
 The project follows a standard Spring Boot project structure:
 
-'src/main/java' contains the Java source code
-'src/main/resources' contains the application configuration files and Thymeleaf templates
-'src/main/resources/static' contains the static assets (CSS and images)
+- 'src/main/java': Java source code.
+- 'src/main/resources': App configuration and Thymeleaf templates.
+- 'src/main/resources/static': CSS and images.
